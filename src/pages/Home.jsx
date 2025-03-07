@@ -4,10 +4,11 @@ import {Link} from "react-router-dom";
 import HighlightText from '../components/core/HomePage/HighlightText';
 import CTAButton from '../components/core/HomePage/Button';
 import Hero1 from '../assets/Images/hero1.png';
+import CodeBlocks from '../components/core/HomePage/CodeBlocks';
 const Home = () => {
     return (
-        <div>
-            {/* secttion1 */}
+        <div className='flex flex-col w-full px-12'>
+{/* SECTION-1 */}
             <div className='relative flex flex-row w-11/12  text-white justify-between items-center'>
                 <div className='flex flex-col justify-between items-center w-[80%]'>
                     <Link to={"/signup"}>
@@ -37,13 +38,88 @@ const Home = () => {
                         </CTAButton>
                     </div>
                 </div>
-                <div className='w-[800px] mt-24'>
+                <div className='w-[800px] mt-24 '>
                     <img src={Hero1} alt='' className='object-cover w-full  '/> 
                 </div>
             </div>
+{/* SECTION-2  */}
+            {/*Code Block section1 */}
+            <div className='text-white  '>
+                <CodeBlocks 
+                    position={'lg:flex-row'}
+                    heading={
+                        <div className='lg:text-4xl  font-semibold sm:w-full'>
+                            Turn Potential
+                            <HighlightText text={"into Power "} />
+                            with our online courses
+                        </div>
+                    }
+                    subheading={
+                        "Designed and Taught by industry veterans with extensive coding experience, our courses are thoughtfully designed to share their passion and insights with you."
+                    }
+                    ctabtn1={
+                        {
+                            btnText: "try it yourself",
+                            linkTo: "/login",
+                            active: true,
+                        }
+                    }
+                    ctabtn2={
+                        {
+                            btnText: "learn more",
+                            linkTo: "/signup",
+                            active: false,
+                        }
+                    }
+                    codeblock=
+                    {`<!DOCTYPE html>\n<html>\n<head>
+                        <title>CodeSavvy</title>
+                        <linkrel="stylesheet"href="styles.css">\n</head>\n<body>\n<h1><ahref="/">Header</a></h1>\n<nav><a href="one/">One</a><a href="two/">Two</a>
+                        <a href="three/">Three</a>\n</nav>`
+                    }
+                    codeColor={"text-yellow-25"}
+                    backgroundGradient={"grad"}
 
-            {/* secttion2 */}
-            {/* secttion3 */}
+                />
+            </div>
+            {/* Code Block section2 */}
+            <div className='text-white  '>
+                <CodeBlocks 
+                    position={'lg:flex-row-reverse'}
+                    heading={
+                        <div className='lg:text-4xl  font-semibold sm:w-full'>
+                            Start
+                            <HighlightText text={"Coding "} />
+                            in Seconds
+                        </div>
+                    }
+                    subheading={
+                        "Get your hands dirty! With Our hands-on learning method has you coding and building from the very first step."
+                    }
+                    ctabtn1={
+                        {
+                            btnText: "Lession",
+                            linkTo: "/login",
+                            active: true,
+                        }
+                    }
+                    ctabtn2={
+                        {
+                            btnText: "learn more",
+                            linkTo: "/signup",
+                            active: false,
+                        }
+                    }
+                    codeblock=
+                    {`<!DOCTYPE html>\n<html>\n<head>
+                        <title>CodeSavvy</title>
+                        <linkrel="stylesheet"href="styles.css">\n</head>\n<body>\n<h1><ahref="/">Header</a></h1>\n<nav><a href="one/">One</a><a href="two/">Two</a>
+                        <a href="three/">Three</a>\n</nav>`
+                    }
+                    codeColor={"text-yellow-25"}
+                    backgroundGradient={"grad2"}
+                />
+            </div>
             {/* Footer */}
         </div>
     )
