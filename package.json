@@ -1,8 +1,9 @@
 {
-  "name": "react-tailwind-css-starter-pack",
+  "name": "codesavvy",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@lottiefiles/dotlottie-react": "^0.13.2",
     "concurrently": "^8.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -14,11 +15,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thepranaygupta/react-tailwind-css-starter-pack.git"
+    "url": "https://github.com/ishaswatsinha/CodeSavvy"
   },
-  "author": "Pranay Gupta",
+  "author": "Shaswat sinha",
   "bugs": {
-    "url": "https://github.com/thepranaygupta/react-tailwind-css-starter-pack/issues"
+    "url": "https://github.com/ishaswatsinha/CodeSavvy"
   },
   "scripts": {
     "start": "react-scripts start",

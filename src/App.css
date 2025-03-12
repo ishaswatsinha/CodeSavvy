@@ -66,4 +66,11 @@ order: 0;
 flex-grow: 0;
 z-index: 0;
 }
-    
+
+.Toolkit-bg{
+  background-image: url('/src/assets/Images/Toolkit-bg.png');
+  background-size: cover;
+}
+.bg-orange{
+  background-color: #E8BF12;
+}
