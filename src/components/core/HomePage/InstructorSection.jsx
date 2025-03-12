@@ -12,7 +12,7 @@ const InstructorSection = () =>{
                     <img src={instructorImg} alt="" />
                 </div>
             </div>
-            <div className='flex flex-col gap-2 pt-24' >
+            <div className='flex flex-col gap-5 pt-24' >
                 <h1 className='font-semibold text-4xl'>
                     Become an 
                     <HighlightText text={"instructor"}/>
@@ -21,12 +21,11 @@ const InstructorSection = () =>{
                 Instructors worldwide inspire millions of students on CodeSavvy. With our powerful tools and resources, you can share your expertise, teach your passion, and make a lasting impact.
                 </p>
                 <div>
-                <CTAButton linkto='/instructors' >
-                    <div className=' flex flex-row gap-1 items-center'>
-                        Start Teaching
+                <CTAButton  linkto='/instructors' >
+                    <div className='flex flex-row gap-1 items-center'>
+                        Start Today
                         <FaArrowRight/>
                     </div>
-                    
                 </CTAButton>
                 </div>
             </div>

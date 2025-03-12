@@ -74,3 +74,7 @@ z-index: 0;
 .bg-orange{
   background-color: #E8BF12;
 }
+.footer-bg{
+  background-image: url('/src/assets/Images/footer-bg.png');
+  background-size: cover;
+}

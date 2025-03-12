@@ -8,7 +8,7 @@ import img3 from '../../../assets/Images/Plan_your_lessons.svg'
 
 const LanguageToolkit = () =>{
     return (
-        <div className='mt-20'>
+        <div className='mb-20'>
             <div className='flex items-center flex-col gap-5'>
                 <div className='text-4xl text-center font-semibold w-[70%] '>
                 Your ultimate toolkit for

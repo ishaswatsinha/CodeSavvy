@@ -9,12 +9,13 @@ import CodeBlocks from '../components/core/HomePage/CodeBlocks';
 import TimelineSection from '../components/core/HomePage/TimelineSection';
 import LanguageToolkit from '../components/core/HomePage/LanguageToolkit';
 import InstructorSection from '../components/core/HomePage/InstructorSection';
-
+import OurTeam from '../components/core/HomePage/OurTeam';
+import Footer from '../components/common/Footer'
 const Home = () => {
     return (
         <div>
 
-            {/* SECTION-1 */}
+            {/* SECTION-1 --> BLUE-PART*/}
             <div className=' mx-auto relative flex flex-col w-11/12 items-center justify-between text-white'>
                 {/* Elevate Your Skill Part */}
                 <div className='flex lg:flex-row flex-col justify-between items-center '>
@@ -80,10 +81,15 @@ const Home = () => {
                         }
                     }
                     codeblock=
-                    {`<!DOCTYPE html>\n<html>\n<head>
+                    {
+                        // `<!DOCTYPE html>\n<html>\n<head>
+                        // <title>CodeSavvy</title>
+                        // <linkrel="stylesheet"href="styles.css">\n</head>\n<body>\n<h1><a href="/">Header</a></h1>\n<nav><a href="one/">One</a><a href="two/">Two</a>
+                        // <a href="three/">Three</a>\n</nav>`
+                        `<!DOCTYPE html>\n<html>\n<head>
                         <title>CodeSavvy</title>
-                        <linkrel="stylesheet"href="styles.css">\n</head>\n<body>\n<h1><ahref="/">Header</a></h1>\n<nav><a href="one/">One</a><a href="two/">Two</a>
-                        <a href="three/">Three</a>\n</nav>`
+                        <linkrel="stylesheet"href="styles.css">\n</head>\n<body>\n<h1> Namastey ji !!! </h1>\n<h2> Welcome to CodeSavvy 🙏 </h2>\n<a href="two/">Two</a>
+                        <a href="three/">Three</a>\n</body>`
                     }
                     codeColor={"text-yellow-25"}
                     backgroundGradient={"grad"}
@@ -130,14 +136,13 @@ const Home = () => {
                 </div>
                 {/* TimelineSection */}
                 <TimelineSection/>
-                
-
             </div>
-            {/* SECTION-2  */}
+
+
+            {/* SECTION-2 --> ORANGE-PART  */}
             <div className='bg-orange text-richblack-700'>
                 <div className=' w-11/12 max-w-maxContent flex flex-col items-center justify-between gap-5 mx-auto'>
                     <div className='h-[150px]'></div>
-                    
                     <div className='flex flex-row gap-7 text-white'>
                         <CTAButton active={true} linkto={"/signup"}>
                             <div className='flex items-center gap-3'>
@@ -151,13 +156,14 @@ const Home = () => {
                             </div>     
                         </CTAButton>
                     </div>
-
-
-                    
-                     
                 </div>
+                
+                {/* OUR-TEAM SECTION */}
+                <OurTeam/>
+                
             </div>
 
+            {/* Section 3 --> WHITE-PART */}
             <div className=' bg-white w-full  '>
                 <div className='Toolkit-bg w-full p-24'>
                     <div className=' mx-auto relative flex flex-col w-11/12 items-center justify-center text-richblack-900'>
@@ -173,8 +179,9 @@ const Home = () => {
             
 
             
-
-
+            <div className='min-w-full  bg-white footer-bg'>
+                <Footer/>
+            </div>
             
         </div>
     )
