@@ -38,7 +38,7 @@ const Home = () => {
                         Wherever you are, whenever you’re ready—our online coding courses offer the flexibility to learn at your own speed. Enjoy hands-on projects, fun quizzes, and personalized instructor feedback along the way!—all designed to help you succeed!
                         </div>
                         <div className='flex flex-row gap-7 mt-8'>
-                            <CTAButton active={true} linkto={"/signup"}>
+                            <CTAButton active={true} linkto={"/About"}>
                                 Learn More
                             </CTAButton>
                             
