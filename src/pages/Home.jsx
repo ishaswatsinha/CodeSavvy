@@ -42,7 +42,7 @@ const Home = () => {
                                 Learn More
                             </CTAButton>
                             
-                            <CTAButton active={false} linkto={"/login"}>
+                            <CTAButton active={false} linkto={"/StudentSetting"}>
                                 Book a Demo
                             </CTAButton>
                         </div>
@@ -144,13 +144,13 @@ const Home = () => {
                 <div className=' w-11/12 max-w-maxContent flex flex-col items-center justify-between gap-5 mx-auto'>
                     <div className='h-[150px]'></div>
                     <div className='flex flex-row gap-7 text-white'>
-                        <CTAButton active={true} linkto={"/signup"}>
+                        <CTAButton active={true} linkto={"/StudentProfile"}>
                             <div className='flex items-center gap-3'>
                                 Full Catalog 
                             </div>
                             <FaArrowRight />
                         </CTAButton>
-                        <CTAButton active={false} linkto={"/login"}>
+                        <CTAButton active={false} linkto={"/StudentSetting"}>
                         <div> 
                                 Learn More
                             </div>     
