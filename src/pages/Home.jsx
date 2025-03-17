@@ -5,12 +5,12 @@ import HighlightText from '../components/core/HomePage/HighlightText';
 import CTAButton from '../components/core/HomePage/Button';
 import Hero1 from '../assets/Images/hero1.png';
 import CodeBlocks from '../components/core/HomePage/CodeBlocks';
-// import LottieAnimation from '../components/core/HomePage/LottieAnimation';
 import TimelineSection from '../components/core/HomePage/TimelineSection';
 import LanguageToolkit from '../components/core/HomePage/LanguageToolkit';
 import InstructorSection from '../components/core/HomePage/InstructorSection';
 import OurTeam from '../components/core/HomePage/OurTeam';
 import Footer from '../components/common/Footer'
+import CodeBeyond from '../components/core/HomePage/CodeBeyond';
 const Home = () => {
     return (
         <div>
@@ -82,10 +82,6 @@ const Home = () => {
                     }
                     codeblock=
                     {
-                        // `<!DOCTYPE html>\n<html>\n<head>
-                        // <title>CodeSavvy</title>
-                        // <linkrel="stylesheet"href="styles.css">\n</head>\n<body>\n<h1><a href="/">Header</a></h1>\n<nav><a href="one/">One</a><a href="two/">Two</a>
-                        // <a href="three/">Three</a>\n</nav>`
                         `<!DOCTYPE html>\n<html>\n<head>
                         <title>CodeSavvy</title>
                         <linkrel="stylesheet"href="styles.css">\n</head>\n<body>\n<h1> Namastey ji !!! </h1>\n<h2> Welcome to CodeSavvy 🙏 </h2>\n<a href="two/">Two</a>
@@ -141,8 +137,12 @@ const Home = () => {
 
             {/* SECTION-2 --> ORANGE-PART  */}
             <div className='bg-orange text-richblack-700'>
+
                 <div className=' w-11/12 max-w-maxContent flex flex-col items-center justify-between gap-5 mx-auto'>
                     <div className='h-[150px]'></div>
+                    
+                    <CodeBeyond/>
+                    
                     <div className='flex flex-row gap-7 text-white'>
                         <CTAButton active={true} linkto={"/StudentProfile"}>
                             <div className='flex items-center gap-3'>
@@ -175,13 +175,10 @@ const Home = () => {
                 </div>
             </div>
             
-
             
-
-            
-            <div className='min-w-full  bg-white footer-bg'>
-                <Footer/>
-            </div>
+            {/* Footer Section*/}
+            <Footer/>
+         
             
         </div>
     )

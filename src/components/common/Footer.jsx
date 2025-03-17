@@ -24,7 +24,7 @@ const Community = ["Forums", "Chapters", "Events"];
 
 const Footer = () => {
   return (
-    <div className="pt-56 gap-0">
+    <div className="pt-56 gap-0 min-w-full  bg-white footer-bg">
       <div className=" mt-24 flex lg:flex-row gap-8 items-center justify-between w-11/12 max-w-maxContent text-richblack-400 leading-6 mx-auto relative pt-14">
       
 
@@ -48,7 +48,7 @@ const Footer = () => {
                   );
                 })}
               </div>
-              <div className="flex gap-3 text-lg">
+              <div className="flex gap-3 text-lg ">
                 <FaFacebook />
                 <FaGoogle />
                 <FaTwitter />
@@ -175,7 +175,7 @@ const Footer = () => {
             })}
           </div>
 
-        <div className="text-center">Made by Shaswat Sinha 🗿 © 2025 CodeSavvy</div>
+        <div className="text-center">Made with ❤️ CodeSavvy © 2025</div>
         </div>
       </div>
     </div>
