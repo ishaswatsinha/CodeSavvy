@@ -12,8 +12,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
+        
         <Route path="/StudentProfile" element={< ProfilePage/>} />
         <Route path="/StudentSetting" element={< EditSetting/>} />
+        
       </Routes>
     </div>
   );
