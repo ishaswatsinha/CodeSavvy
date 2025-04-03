@@ -14,9 +14,9 @@ const FoundingStory = () => {
                 </div>
             </div>
             <div className='w-[50%] flex justify-center'>
-                <img src='/path-to-your-image.jpg' alt='Founding Story' className='w-full h-auto rounded-lg' />
+                <img src='' alt='Founding Story' className='w-full h-auto rounded-lg' />
             </div>
-        </div>
+        </div>~
 
         <div className='flex flex-row items-center p-10 text-richblack-900 gap-10'>
             {/* Vision Section */}
