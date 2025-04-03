@@ -21,7 +21,7 @@ const CourseCard = ({cardData,currentCard,setCurrentCard})=>
                     {cardData.description}
                 </p>
                 </div>
-
+                
                 <div className=' flex justify-between w-full p-3'>
                 <p>{cardData.level}</p>
                 <p>{cardData.lessionNumber} Lessons</p>

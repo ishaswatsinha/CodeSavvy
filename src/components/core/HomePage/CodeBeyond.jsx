@@ -60,8 +60,7 @@ const CodeBeyond = ()=>{
 
                     </div>
 
-      {/* course card */}
-
+            {/* course card */}
             <div className=' flex gap-9 w-full justify-center mt-5 flex-wrap  right-0 left-0 mr-auto ml-auto'>
                 {
                     courses.map(  (element, index) => {
@@ -80,5 +79,4 @@ const CodeBeyond = ()=>{
         
     )
 }
-
 export default CodeBeyond;
