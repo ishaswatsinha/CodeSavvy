@@ -8,7 +8,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Navbar from "./components/common/Navbar";
 import {useState } from 'react'
-
+import ContactPage from "./pages/ContactUs";
 
 
 function App() {
@@ -25,6 +25,7 @@ function App() {
         <Route path="/signup" element={<Signup  setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/StudentProfile" element={< ProfilePage/>} />
         <Route path="/StudentSetting" element={< EditSetting/>} />
+        <Route path="/contact" element={<ContactPage/>}/>
         
       </Routes>
     </div>
