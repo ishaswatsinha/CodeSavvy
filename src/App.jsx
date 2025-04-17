@@ -9,6 +9,7 @@ import Signup from "./pages/Signup";
 import Navbar from "./components/common/Navbar";
 import {useState } from 'react'
 import ContactPage from "./pages/ContactUs";
+import CourseDetails from "./pages/CourseDetails";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/StudentProfile" element={< ProfilePage/>} />
         <Route path="/StudentSetting" element={< EditSetting/>} />
         <Route path="/contact" element={<ContactPage/>}/>
+        <Route path="/courses/:courseId" element={<CourseDetails />} />
         
       </Routes>
     </div>
