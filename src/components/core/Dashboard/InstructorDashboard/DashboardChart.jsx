@@ -6,7 +6,6 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 const DashboardChart = ({details,currentChart}) => {
     ChartJS.register(ArcElement, Tooltip, Legend);
 
-
     const randomColor = (num) => {
         const colors = []
         for(let i=0; i<num; i++) {

@@ -54,7 +54,6 @@ exports.signup = async (req, res) => {
         message: "User already exists. Please sign in to continue.",
       })
     }
-
     // Find the most recent OTP for the email
     const response = await OTP.find({ email }).sort({ createdAt: -1 }).limit(1)
     console.log(response)

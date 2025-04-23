@@ -1,51 +1,60 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useRef, useState } from "react"
+import { AiOutlineCaretDown } from "react-icons/ai"
+import { VscDashboard, VscSignOut } from "react-icons/vsc"
+import { useDispatch, useSelector } from "react-redux"
+import { Link, useNavigate } from "react-router-dom"
 
-const ProfileDropdown = () => {
-  const [open, setOpen] = useState(false);
-  const dropdownRef = useRef();
+import useOnClickOutside from "../../../hooks/useOnClickOutside"
+import { logout } from "../../../services/operations/authAPI"
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+export default function ProfileDropdown() {
+  const { user } = useSelector((state) => state.profile)
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const [open, setOpen] = useState(false)
+  const ref = useRef(null)
+
+  useOnClickOutside(ref, () => setOpen(false))
+
+  if (!user){
+    console.log("no user");
+    return localStorage.setItem("token",null)
+  } 
 
   return (
-    <div className="relative inline-block text-left" ref={dropdownRef}>
-      <button
-        onClick={() => setOpen(!open)}
-        className="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-full shadow hover:bg-gray-700 transition"
-      >
+    <button className="relative" onClick={() => setOpen(true)}>
+      <div className="flex items-center gap-x-1">
         <img
-          src="https://i.pravatar.cc/40"
-          alt="Profile"
-          className="w-8 h-8 rounded-full"
+          src={user?.image}
+          alt={`profile-${user?.firstName}`}
+          className="aspect-square w-[30px] rounded-full object-cover"
         />
-        <span>Suraj</span>
-        <span className="text-sm">▼</span>
-      </button>
-
+        <AiOutlineCaretDown className="text-sm text-richblack-100" />
+      </div>
       {open && (
-        <div className="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-lg z-50">
-          <ul className="py-1 text-sm text-gray-700">
-            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-              👤 My Profile
-            </li>
-            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-              ⚙️ Settings
-            </li>
-            <li className="border-t px-4 py-2 hover:bg-gray-100 cursor-pointer">
-              🚪 Logout
-            </li>
-          </ul>
+        <div
+          onClick={(e) => e.stopPropagation()}
+          className="absolute top-[118%] -right-8 z-[1000] divide-y-[1px] divide-richblack-700 overflow-hidden rounded-md border-[1px] border-richblack-700 bg-richblack-800"
+          ref={ref}
+        >
+          <Link to="/dashboard/my-profile" onClick={() => setOpen(false)}>
+            <div className="flex w-full items-center gap-x-1 py-[10px] px-[12px] text-sm text-richblack-100 hover:bg-richblack-700 hover:text-richblack-25">
+              <VscDashboard className="text-lg" />
+              Dashboard
+            </div>
+          </Link>
+          <div
+            onClick={() => {
+              dispatch(logout(navigate))
+              setOpen(false)
+            }}
+            className="flex w-full items-center gap-x-1 py-[10px] px-[12px] text-sm text-richblack-100 hover:bg-richblack-700 hover:text-richblack-25"
+          >
+            <VscSignOut className="text-lg" />
+            Logout
+          </div>
         </div>
       )}
-    </div>
-  );
-};
-
-export default ProfileDropdown;
+    </button>
+  )
+}
