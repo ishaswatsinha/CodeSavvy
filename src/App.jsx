@@ -32,7 +32,6 @@ import AdminPannel from "./components/core/Dashboard/AdminPannel";
 import LoadingBar from "react-top-loading-bar";
 // import ScrollToTop from "./components/ScrollToTop";
 import Catalog from "./pages/Catalog";
-// import Footer from "./components/common/Footer";
 import ViewCourse from "./pages/ViewCourse";
 import VideoDetails from "./components/core/ViewCourse/VideoDetails";
 
